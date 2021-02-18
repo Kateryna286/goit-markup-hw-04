@@ -32,10 +32,7 @@
   text-decoration: none;
 }
 
-.header-list-link:hover {
-  color: var(--accent-color);
-}
-
+.header-list-link:hover,
 .header-list-link:focus {
   color: var(--accent-color);
 }
@@ -47,6 +44,9 @@
 /* Оформление ссылок email и tel в шапке */
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+
   color: var(--text-color);
 
   font-weight: 500;
@@ -56,17 +56,13 @@
   text-decoration: none;
 }
 
-.contacts-link:hover {
-  color: var(--accent-color);
-}
-
+.contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
 }
 
 /* Геометрия и позиционирование Header */
 
-/* Размещает в одну строку нав. ссылки */
 /* Размещает в одну строку ссылки email и tel */
 
 .header-list,
@@ -110,16 +106,40 @@
   margin-right: 0;
 } */
 
+/* Цвет и отступ для иконок мейла и телефона */
+
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 /* Герой */
 
 .hero {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 94px;
   width: 1600px;
   min-height: 600px;
 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 94px;
+
   text-align: center;
+}
+
+.header-overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/img-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -289,6 +309,9 @@
 
 .team-card-thumb {
   background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* Подвал */
