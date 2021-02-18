@@ -261,7 +261,7 @@
 }
 
 .team-item-text {
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 
   color: var(--text-color);
 
@@ -295,7 +295,7 @@
 
 .footer-logo {
   display: block;
-  padding-top: 50px;
+  padding-top: 60px;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
