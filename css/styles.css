@@ -1,3 +1,94 @@
+:root {
+  --main-background-color: #ffffff;
+  --white-additional-color: #ffffff;
+  --additional-background-color: #f5f4fa;
+  --title-text-color: #212121;
+  --text-color: #757575;
+  --accent-color: #2196f3;
+  --logo-color: #000;
+  --hero-footer-color: #2f303a;
+  --mailtel-logo-footer: rgba(255, 255, 255, 0.6);
+  --grey-svg-color: #afb1b8;
+  --portfolio-border-color: #eeeeee;
+}
+
+/* Общая стилизация */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Фоновые цвета */
+
+.header {
+  background-color: var(--main-background-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.hero,
+.footer {
+  background-color: var(--hero-footer-color);
+}
+
+.team {
+  background-color: var(--additional-background-color);
+}
+
+/* Шрифты */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Общие стили для контейнера */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Стилизация разделов с фоном, отличным от основного */
+
+.team {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 252px;
+}
+
+/* Обнуление встроенных стилей */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* Header */
 
 /* Логотип в шапке */
@@ -23,6 +114,9 @@
 /* Оформление нав. ссылок в шапке */
 
 .header-list-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -46,6 +140,9 @@
 .contacts-link {
   display: flex;
   align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--text-color);
 
@@ -96,16 +193,6 @@
   margin-left: 50px;
 }
 
-/* Альтернативные варианты создания отступов */
-
-/* .header-list li:not(:last-child) {
-  margin-right: 50px;
-} */
-
-/* .header-list li:last-child {
-  margin-right: 0;
-} */
-
 /* Цвет и отступ для иконок мейла и телефона */
 
 .icon-contacts {
@@ -116,41 +203,43 @@
 /* Герой */
 
 .hero {
-  width: 1600px;
-  min-height: 600px;
+  max-width: 1600px;
+  height: 600px;
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
 
   text-align: center;
 }
 
 .header-overlay {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding-top: 200px;
+
   max-width: 1600px;
-  height: 600px;
+  min-height: 600px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url('../images/img-hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .hero-title {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
-  padding-top: 200px;
+  margin-bottom: 30px;
 
   width: 696px;
 
-  color: #ffffff;
+  color: var(--white-additional-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -160,13 +249,11 @@
 }
 
 .hero-link {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
+  display: inline-block;
+  padding: 10px 32px;
   border-radius: 4px;
 
-  color: #fff;
+  color: var(--white-additional-color);
   background-color: var(--accent-color);
 
   font-weight: 700;
@@ -174,6 +261,25 @@
 }
 
 /* Особенности */
+
+.features {
+  padding-top: 94px;
+}
+
+/* Декоративные элементы  */
+
+.features-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--additional-background-color);
+}
 
 /* Стили текста и заголовков */
 
@@ -205,7 +311,6 @@
 
   margin-left: -30px;
   margin-top: -30px;
-  margin-bottom: 94px;
 }
 
 /* Размещает блоки по 4 в строке. Добавляет отступы между ними */
@@ -218,6 +323,11 @@
 }
 
 /* Задачи */
+
+.issues {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .issues-title {
   margin-bottom: 50px;
@@ -239,7 +349,6 @@
 
   margin-left: -30px;
   margin-top: -30px;
-  margin-bottom: 94px;
 }
 
 /* Размещает блоки по 3 в строке. Добавляет отступы между ними */
@@ -253,9 +362,13 @@
 
 /* Команда */
 
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .team-title {
   margin-bottom: 50px;
-  padding-top: 94px;
 
   color: var(--title-text-color);
 
@@ -292,13 +405,16 @@
   text-align: center;
 }
 
+/* Размещает блоки в строку. Компенсационные отступы */
+
 .team-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-  padding-bottom: 94px;
 }
+
+/* Размещает блоки по 3 в строке. Добавляет отступы между ними */
 
 .team-list > .team-list-item {
   flex-basis: calc(100% / 4 - 30px);
@@ -307,11 +423,96 @@
   margin-top: 30px;
 }
 
-.team-card-thumb {
-  background-color: #fff;
+.team-list-item {
+  background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+/* Блок с иконками соц.сетей */
+
+.social-network {
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-bottom: 30px;
+}
+
+/* Размещение ссылок в строку, выравнивание */
+
+.circle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--grey-svg-color);
+  background-color: var(--main-background-color);
+}
+
+.circle-button:hover,
+.circle-button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-additional-color);
+}
+
+.icon-sn {
+  fill: currentColor;
+}
+
+/* Постоянные клиенты */
+
+.clients {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+
+  text-align: center;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  color: #afb1b8;
+}
+
+.button-clients:hover,
+.button-clients:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.clients-icon-logo {
+  fill: currentColor;
 }
 
 /* Подвал */
@@ -320,30 +521,36 @@
   display: block;
   padding-top: 60px;
   margin-bottom: 20px;
+
+  color: var(--white-additional-color);
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: #ffffff;
+
   text-decoration: none;
 }
 
 .footer-address-link {
   margin-bottom: 9px;
+
+  color: var(--white-additional-color);
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: #ffffff;
 }
 
 .footer-email,
 .footer-tel {
+  color: var(--mailtel-logo-footer);
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--mailtel-logo-footer);
 }
 
 .footer-email {
@@ -356,6 +563,49 @@
   margin-bottom: 9px;
 }
 
+/* Ставит блоки футера в строку */
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-sn {
+  padding-top: 72px;
+  margin-left: 70px;
+}
+
+.footer-sn-title {
+  margin-bottom: 20px;
+
+  color: var(--white-additional-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Ставит иконки в строку и добавляет выравнивание */
+
+.footer-circle-icons {
+  display: flex;
+}
+
+.footer-circle-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-additional-color);
+}
+
+.footer-sn-items {
+  margin-right: 10px;
+}
+
+.footer-circle-icons li:last-child {
+  margin-right: 0;
+}
+
 /* Портфолио */
 
 .buttons {
@@ -364,10 +614,7 @@
 }
 
 .portfolio-button {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 22px;
-  padding-left: 22px;
+  padding: 6px 22px;
 
   color: var(--title-text-color);
   background-color: var(--additional-background-color);
@@ -382,7 +629,7 @@
 }
 
 .portfolio-button:hover {
-  color: #fff;
+  color: var(--white-additional-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -404,6 +651,23 @@
   margin-right: 8px;
 }
 
+/* Портфолио. Работы */
+
+/* Эффект ховера на ссылку */
+
+.portfolio-list-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Размещает карточки в строку. Компенсационные отступы */
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -419,7 +683,7 @@
   margin-left: 30px;
   margin-top: 30px;
 
-  background-color: #fff;
+  background-color: var(--main-background-color);
 }
 
 .card-content {
@@ -428,9 +692,9 @@
   padding-left: 24px;
   padding-right: 24px;
 
-  border-bottom: 1px solid #eee;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-bottom: 1px solid var(--portfolio-border-color);
+  border-left: 1px solid var(--portfolio-border-color);
+  border-right: 1px solid var(--portfolio-border-color);
 }
 
 .portfolio-item-header {
